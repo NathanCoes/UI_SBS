@@ -15,8 +15,8 @@ namespace UI_SBS
         public SBS()
         {
             InitializeComponent();
-            FTPStatusIndicator.Text = "On";
-            FTPStatusIndicator.ForeColor = Color.Green;
+            //FTPStatusIndicator.Text = "On";
+            //FTPStatusIndicator.ForeColor = Color.Green;
             ftp_user_input.PasswordChar = '•';
             service_password_input.PasswordChar = '•';
         }
@@ -137,6 +137,61 @@ namespace UI_SBS
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HomeDetailsGroup_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
         {
 
         }
