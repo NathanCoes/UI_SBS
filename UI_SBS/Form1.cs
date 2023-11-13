@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UI_SBS;
 
 namespace UI_SBS
 {
@@ -19,8 +20,6 @@ namespace UI_SBS
         public SBS()
         {
             InitializeComponent();
-            //FTPStatusIndicator.Text = "On";
-            //FTPStatusIndicator.ForeColor = Color.Green;
             ftp_user_input.PasswordChar = '•';
             service_password_input.PasswordChar = '•';
             MenuHomeOption.BackColor= System.Drawing.SystemColors.ControlLight;
@@ -238,10 +237,6 @@ namespace UI_SBS
             sectionGroup.Visible = true;
             last_option = menuOption;
             lastSection = sectionGroup;
-
-            Console.WriteLine(lastSection);
-            Console.WriteLine("Last section: ", lastSection.Visible);
-            Console.WriteLine("Current section: ", sectionGroup.Visible);
         }
     }
 }
