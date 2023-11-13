@@ -33,9 +33,11 @@
             this.FTPStatus = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuHomeOption = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuFileOption = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuFTPOption = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuServerOption = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuDetailsOption = new System.Windows.Forms.ToolStripMenuItem();
             this.ServerStatusIndicator = new System.Windows.Forms.Label();
             this.FTPStatusIndicator = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -47,7 +49,6 @@
             this.desktop_check = new System.Windows.Forms.CheckBox();
             this.saveFileSettings = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ftp_server_input = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ftp_port_input = new System.Windows.Forms.TextBox();
@@ -59,17 +60,17 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.ftp_test = new System.Windows.Forms.Button();
             this.FTPSettingsGroup = new System.Windows.Forms.GroupBox();
-            this.service_server_input = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.service_port_input = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.service_user_input = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.service_password_input = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.server_test = new System.Windows.Forms.Button();
             this.ServerSettingsGroup = new System.Windows.Forms.GroupBox();
+            this.server_test = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.service_password_input = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.service_user_input = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.service_port_input = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.service_server_input = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -77,16 +78,27 @@
             this.device_ip = new System.Windows.Forms.Label();
             this.session_id = new System.Windows.Forms.Label();
             this.HomeDetailsGroup = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.disk_one_capacity = new System.Windows.Forms.ProgressBar();
             this.label14 = new System.Windows.Forms.Label();
+            this.disk_one_capacity = new System.Windows.Forms.ProgressBar();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.DetailsSettingsGroup = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.fileSettingsGroup.SuspendLayout();
             this.FTPSettingsGroup.SuspendLayout();
             this.ServerSettingsGroup.SuspendLayout();
             this.HomeDetailsGroup.SuspendLayout();
+            this.DetailsSettingsGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ServerStatus
@@ -112,12 +124,20 @@
             // Menu
             // 
             this.Menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inicioToolStripMenuItem,
+            this.MenuHomeOption,
             this.MenuFileOption,
             this.MenuFTPOption,
-            this.MenuServerOption});
+            this.MenuServerOption,
+            this.MenuDetailsOption});
             this.Menu.Name = "Menu";
             resources.ApplyResources(this.Menu, "Menu");
+            // 
+            // MenuHomeOption
+            // 
+            this.MenuHomeOption.BackColor = System.Drawing.SystemColors.Control;
+            this.MenuHomeOption.Name = "MenuHomeOption";
+            resources.ApplyResources(this.MenuHomeOption, "MenuHomeOption");
+            this.MenuHomeOption.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
             // 
             // MenuFileOption
             // 
@@ -129,12 +149,19 @@
             // 
             this.MenuFTPOption.Name = "MenuFTPOption";
             resources.ApplyResources(this.MenuFTPOption, "MenuFTPOption");
+            this.MenuFTPOption.Click += new System.EventHandler(this.MenuFTPOption_Click);
             // 
             // MenuServerOption
             // 
             this.MenuServerOption.Name = "MenuServerOption";
             resources.ApplyResources(this.MenuServerOption, "MenuServerOption");
             this.MenuServerOption.Click += new System.EventHandler(this.fTPSettingsToolStripMenuItem_Click);
+            // 
+            // MenuDetailsOption
+            // 
+            this.MenuDetailsOption.Name = "MenuDetailsOption";
+            resources.ApplyResources(this.MenuDetailsOption, "MenuDetailsOption");
+            this.MenuDetailsOption.Click += new System.EventHandler(this.unlockToolStripMenuItem_Click);
             // 
             // ServerStatusIndicator
             // 
@@ -227,12 +254,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // inicioToolStripMenuItem
-            // 
-            this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
-            resources.ApplyResources(this.inicioToolStripMenuItem, "inicioToolStripMenuItem");
-            this.inicioToolStripMenuItem.Click += new System.EventHandler(this.inicioToolStripMenuItem_Click);
-            // 
             // ftp_server_input
             // 
             resources.ApplyResources(this.ftp_server_input, "ftp_server_input");
@@ -297,7 +318,6 @@
             // 
             // FTPSettingsGroup
             // 
-            this.FTPSettingsGroup.Controls.Add(this.ServerSettingsGroup);
             this.FTPSettingsGroup.Controls.Add(this.ftp_test);
             this.FTPSettingsGroup.Controls.Add(this.textBox6);
             this.FTPSettingsGroup.Controls.Add(this.label4);
@@ -311,60 +331,6 @@
             resources.ApplyResources(this.FTPSettingsGroup, "FTPSettingsGroup");
             this.FTPSettingsGroup.Name = "FTPSettingsGroup";
             this.FTPSettingsGroup.TabStop = false;
-            // 
-            // service_server_input
-            // 
-            resources.ApplyResources(this.service_server_input, "service_server_input");
-            this.service_server_input.Name = "service_server_input";
-            // 
-            // label8
-            // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.Name = "label8";
-            // 
-            // service_port_input
-            // 
-            resources.ApplyResources(this.service_port_input, "service_port_input");
-            this.service_port_input.Name = "service_port_input";
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
-            // 
-            // service_user_input
-            // 
-            resources.ApplyResources(this.service_user_input, "service_user_input");
-            this.service_user_input.Name = "service_user_input";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
-            // service_password_input
-            // 
-            resources.ApplyResources(this.service_password_input, "service_password_input");
-            this.service_password_input.Name = "service_password_input";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.Menu;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
-            // 
-            // server_test
-            // 
-            resources.ApplyResources(this.server_test, "server_test");
-            this.server_test.Name = "server_test";
-            this.server_test.UseVisualStyleBackColor = true;
-            this.server_test.Click += new System.EventHandler(this.button2_Click_2);
             // 
             // ServerSettingsGroup
             // 
@@ -381,6 +347,60 @@
             resources.ApplyResources(this.ServerSettingsGroup, "ServerSettingsGroup");
             this.ServerSettingsGroup.Name = "ServerSettingsGroup";
             this.ServerSettingsGroup.TabStop = false;
+            // 
+            // server_test
+            // 
+            resources.ApplyResources(this.server_test, "server_test");
+            this.server_test.Name = "server_test";
+            this.server_test.UseVisualStyleBackColor = true;
+            this.server_test.Click += new System.EventHandler(this.button2_Click_2);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.textBox2, "textBox2");
+            this.textBox2.Name = "textBox2";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // service_password_input
+            // 
+            resources.ApplyResources(this.service_password_input, "service_password_input");
+            this.service_password_input.Name = "service_password_input";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // service_user_input
+            // 
+            resources.ApplyResources(this.service_user_input, "service_user_input");
+            this.service_user_input.Name = "service_user_input";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // service_port_input
+            // 
+            resources.ApplyResources(this.service_port_input, "service_port_input");
+            this.service_port_input.Name = "service_port_input";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // service_server_input
+            // 
+            resources.ApplyResources(this.service_server_input, "service_server_input");
+            this.service_server_input.Name = "service_server_input";
             // 
             // label9
             // 
@@ -433,15 +453,11 @@
             this.HomeDetailsGroup.TabStop = false;
             this.HomeDetailsGroup.Enter += new System.EventHandler(this.HomeDetailsGroup_Enter);
             // 
-            // label12
+            // label14
             // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
-            // 
-            // label13
-            // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            resources.ApplyResources(this.label14, "label14");
+            this.label14.Name = "label14";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // disk_one_capacity
             // 
@@ -450,21 +466,84 @@
             this.disk_one_capacity.Name = "disk_one_capacity";
             this.disk_one_capacity.Value = 685;
             // 
-            // label14
+            // label13
             // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // DetailsSettingsGroup
+            // 
+            this.DetailsSettingsGroup.Controls.Add(this.label19);
+            this.DetailsSettingsGroup.Controls.Add(this.label18);
+            this.DetailsSettingsGroup.Controls.Add(this.label15);
+            this.DetailsSettingsGroup.Controls.Add(this.pictureBox1);
+            this.DetailsSettingsGroup.Controls.Add(this.textBox4);
+            this.DetailsSettingsGroup.Controls.Add(this.label16);
+            this.DetailsSettingsGroup.Controls.Add(this.textBox5);
+            this.DetailsSettingsGroup.Controls.Add(this.label17);
+            this.DetailsSettingsGroup.Controls.Add(this.button1);
+            resources.ApplyResources(this.DetailsSettingsGroup, "DetailsSettingsGroup");
+            this.DetailsSettingsGroup.Name = "DetailsSettingsGroup";
+            this.DetailsSettingsGroup.TabStop = false;
+            // 
+            // label19
+            // 
+            resources.ApplyResources(this.label19, "label19");
+            this.label19.Name = "label19";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
+            // 
+            // label18
+            // 
+            resources.ApplyResources(this.label18, "label18");
+            this.label18.Name = "label18";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
+            // 
+            // label15
+            // 
+            resources.ApplyResources(this.label15, "label15");
+            this.label15.Name = "label15";
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox4
+            // 
+            resources.ApplyResources(this.textBox4, "textBox4");
+            this.textBox4.Name = "textBox4";
+            // 
+            // label16
+            // 
+            resources.ApplyResources(this.label16, "label16");
+            this.label16.Name = "label16";
+            // 
+            // textBox5
+            // 
+            resources.ApplyResources(this.textBox5, "textBox5");
+            this.textBox5.Name = "textBox5";
+            // 
+            // label17
+            // 
+            resources.ApplyResources(this.label17, "label17");
+            this.label17.Name = "label17";
             // 
             // SBS
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.HomeDetailsGroup);
-            this.Controls.Add(this.FTPSettingsGroup);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.saveFileSettings);
+            this.Controls.Add(this.DetailsSettingsGroup);
+            this.Controls.Add(this.ServerSettingsGroup);
             this.Controls.Add(this.fileSettingsGroup);
+            this.Controls.Add(this.FTPSettingsGroup);
+            this.Controls.Add(this.saveFileSettings);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -484,6 +563,9 @@
             this.ServerSettingsGroup.PerformLayout();
             this.HomeDetailsGroup.ResumeLayout(false);
             this.HomeDetailsGroup.PerformLayout();
+            this.DetailsSettingsGroup.ResumeLayout(false);
+            this.DetailsSettingsGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,7 +590,7 @@
         private System.Windows.Forms.CheckBox desktop_check;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ToolStripMenuItem inicioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MenuHomeOption;
         private System.Windows.Forms.TextBox ftp_server_input;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox ftp_port_input;
@@ -542,6 +624,16 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ToolStripMenuItem MenuDetailsOption;
+        private System.Windows.Forms.GroupBox DetailsSettingsGroup;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label19;
     }
 }
 

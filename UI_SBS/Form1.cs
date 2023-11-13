@@ -12,6 +12,10 @@ namespace UI_SBS
 {
     public partial class SBS : Form
     {
+
+        public ToolStripMenuItem last_option;
+        public GroupBox lastSection;
+
         public SBS()
         {
             InitializeComponent();
@@ -19,6 +23,7 @@ namespace UI_SBS
             //FTPStatusIndicator.ForeColor = Color.Green;
             ftp_user_input.PasswordChar = '•';
             service_password_input.PasswordChar = '•';
+            MenuHomeOption.BackColor= System.Drawing.SystemColors.ControlLight;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,12 +53,12 @@ namespace UI_SBS
 
         private void fileSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            menuControl(MenuFileOption, fileSettingsGroup);
         }
 
         private void fTPSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            menuControl(MenuServerOption, ServerSettingsGroup);
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -143,7 +148,7 @@ namespace UI_SBS
 
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            menuControl(MenuHomeOption, HomeDetailsGroup);
         }
 
         private void button2_Click_2(object sender, EventArgs e)
@@ -158,7 +163,7 @@ namespace UI_SBS
 
         private void label9_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -194,6 +199,49 @@ namespace UI_SBS
         private void label14_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void unlockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            menuControl(MenuDetailsOption, DetailsSettingsGroup);
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuFTPOption_Click(object sender, EventArgs e)
+        {
+            menuControl(MenuFTPOption, FTPSettingsGroup);
+        }
+
+        public void menuControl(ToolStripMenuItem menuOption, GroupBox sectionGroup)
+        {
+            if (last_option != null)
+            {
+                last_option.BackColor = System.Drawing.SystemColors.Control;
+                lastSection.Visible = false;
+            }
+            else
+            {
+                MenuHomeOption.BackColor = System.Drawing.SystemColors.Control;
+                HomeDetailsGroup.Visible = false;
+            }
+
+            menuOption.BackColor = System.Drawing.SystemColors.ControlLight;
+            sectionGroup.Visible = true;
+            last_option = menuOption;
+            lastSection = sectionGroup;
+
+            Console.WriteLine(lastSection);
+            Console.WriteLine("Last section: ", lastSection.Visible);
+            Console.WriteLine("Current section: ", sectionGroup.Visible);
         }
     }
 }
