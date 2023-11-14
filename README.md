@@ -10,7 +10,7 @@ Está software servirá para poder programar respaldos del disco local principal
 
 El proposito es realizar copias de seguridad de los equipos windows sin mayor complejidad.
 
-App de escritorio desarrollado en .Net Framework
+App de escritorio desarrollado en **.Net Framework**
 
 
 ****>>>> Futuras actualizaciones <<<<****
