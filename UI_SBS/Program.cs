@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.NetworkInformation;
 using Microsoft.Toolkit.Uwp.Notifications;
+using System.Xml;
 
 
 namespace UI_SBS
@@ -235,8 +236,12 @@ namespace UI_SBS
                 .AddText(titulo)
                 .AddText(contenido);
 
+            // Obtener el XML de la notificación Toast
+            XmlDocument toastXml = contentBuilder.GetXml();
+
             // Mostrar la notificación Toast
-            ToastNotificationManagerCompat.CreateToastNotifier().Show(contentBuilder.GetToastContent());
+            ToastNotification toast = new ToastNotification(toastXml);
+            ToastNotificationManager.CreateToastNotifier().Show(toast);
         }
     }
 }
