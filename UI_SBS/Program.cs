@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.NetworkInformation;
+using Microsoft.Toolkit.Uwp.Notifications;
+
 
 namespace UI_SBS
 {
@@ -20,7 +19,6 @@ namespace UI_SBS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             SBS_program.validateDocs();
-            //security.Encrypt();
             Application.Run(new SBS());
             
         }
@@ -28,25 +26,28 @@ namespace UI_SBS
 
     public class SBS_program
     {
-        public static DateTime dateTime = DateTime.UtcNow.Date;
-
+        public static string driveLetter = "C";
         public static string sbs_user = "SBS_Admin";
         public static string sbs_password = "bBiFDclTkxZZutWaDDkwfQ=="; // SBS2023!
+        public static string base_folder = $@" {driveLetter}:\Users\{SBS_program.get_device_username()}\AppData\Roaming";
+
+        public static DateTime dateTime = DateTime.UtcNow.Date;        
+        public static DriveInfo driveInfo = new DriveInfo(driveLetter);
 
         public static void validateDocs()
         {
             string[] folders = new string[]
             {
-                @" C:\Users\Sistemas\AppData\Roaming\SBS",
-                @" C:\Users\Sistemas\AppData\Roaming\SBS\logs",
-                @" C:\Users\Sistemas\AppData\Roaming\SBS\config",
-                @" C:\Users\Sistemas\AppData\Roaming\SBS\config\server",
-                @" C:\Users\Sistemas\AppData\Roaming\SBS\config\ftp_server"
+                $@" {base_folder}\SBS",
+                $@" {base_folder}\SBS\logs",
+                $@" {base_folder}\SBS\config",
+                $@" {base_folder}\SBS\config\server",
+                $@" {base_folder}\SBS\config\ftp_server"
             };
             string[] files = new string[]
             {
-                @" C:\Users\Sistemas\AppData\Roaming\SBS\config\server\settings.sbs",
-                @" C:\Users\Sistemas\AppData\Roaming\SBS\config\ftp_server\settings.sbs"
+                $@" {base_folder}\SBS\config\server\settings.sbs",
+                $@" {base_folder}\SBS\config\ftp_server\settings.sbs"
             };
 
             string temp = "";
@@ -135,7 +136,7 @@ namespace UI_SBS
 
         public static void log(string msg)
         {
-            string log_file = @" C:\Users\Sistemas\AppData\Roaming\SBS\logs\log_" + dateTime.ToString("ddMMyyyy") + ".txt";
+            string log_file = $@" {base_folder}\SBS\logs\log_" + dateTime.ToString("ddMMyyyy") + ".txt";
             using (StreamWriter file = File.AppendText(log_file))
             {
                 file.WriteLine("[" + DateTime.Now + $"] >> {msg}");
@@ -157,27 +158,85 @@ namespace UI_SBS
             return Environment.MachineName;
         }
 
-        public static IPv4InterfaceStatistics get_device_ip()
+        public static string get_device_username()
         {
-            // Obtener todas las interfaces de red disponibles
+            return Environment.UserName;
+        }
+
+        public static IPAddress get_device_ip()
+        {
             NetworkInterface[] interfaces = NetworkInterface.GetAllNetworkInterfaces();
 
             foreach (NetworkInterface interfaz in interfaces)
             {
-                // Filtrar solo las interfaces activas y que no sean loopback
                 if (interfaz.OperationalStatus == OperationalStatus.Up && !interfaz.Description.ToLowerInvariant().Contains("loopback"))
                 {
-                    Console.WriteLine($"Interfaz de red activa: {interfaz.Description}");
+                    UnicastIPAddressInformationCollection direccionesIP = interfaz.GetIPProperties().UnicastAddresses;
 
-                    // Puedes acceder a más detalles de la interfaz si es necesario
-                    Console.WriteLine($"Tipo de interfaz: {interfaz.NetworkInterfaceType}");
-                    Console.WriteLine($"Dirección física (MAC): {BitConverter.ToString(interfaz.GetPhysicalAddress().GetAddressBytes())}");
+                    foreach (UnicastIPAddressInformation direccion in direccionesIP)
+                    {
+                        // Filtrar las direcciones IPv4
+                        if (direccion.Address.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                        {
+                            return direccion.Address;
+                        }
+                    }
 
-                    return interfaz.GetIPv4Statistics();
+                    return null;
                 }
             }
 
             return null;
+        }
+
+        public class device_disk
+        {
+            public static double get_device_disk_usedSpace()
+            {
+                if (driveInfo.IsReady)
+                {
+                    long usedSpaceInBytes = driveInfo.TotalSize - driveInfo.AvailableFreeSpace;
+                    double usedSpaceInGB = ConvertBytesToGB(usedSpaceInBytes);
+                    return usedSpaceInGB;
+                }
+                else
+                {
+                    UI_SBS.SBS_program.alert($"La unidad {driveLetter} no está disponible.", "[Disk Device] Problem with the disk!", "OK", "Asterisk");
+                    return 0;
+                }
+            }
+
+            public static double get_device_disk_totalSpace()
+            {
+                if (driveInfo.IsReady)
+                {
+                    long totalSpaceInBytes = driveInfo.TotalSize;
+
+                    double totalSpaceInGB = ConvertBytesToGB(totalSpaceInBytes);
+
+                    return totalSpaceInGB;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
+
+        static double ConvertBytesToGB(long bytes)
+        {
+            return Math.Round(bytes / (1024.0 * 1024.0 * 1024.0), 2);
+        }
+
+        static void notification(string titulo, string contenido)
+        {
+            // Crear la notificación Toast
+            ToastContentBuilder contentBuilder = new ToastContentBuilder()
+                .AddText(titulo)
+                .AddText(contenido);
+
+            // Mostrar la notificación Toast
+            ToastNotificationManagerCompat.CreateToastNotifier().Show(contentBuilder.GetToastContent());
         }
     }
 }

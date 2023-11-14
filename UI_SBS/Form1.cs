@@ -27,7 +27,10 @@ namespace UI_SBS
             MenuHomeOption.BackColor= System.Drawing.SystemColors.ControlLight;
             device_name.Text = SBS_program.get_device_name();
             device_ip.Text = Convert.ToString(SBS_program.get_device_ip());
-            Console.WriteLine(SBS_program.get_device_ip());
+            disk_space.Text = $"{SBS_program.device_disk.get_device_disk_usedSpace()} GB / {SBS_program.device_disk.get_device_disk_totalSpace()} GB";
+            disk_letter.Text = SBS_program.driveLetter+":";
+            disk_capacity.Maximum = Convert.ToInt32(SBS_program.device_disk.get_device_disk_totalSpace());
+            disk_capacity.Value = Convert.ToInt32(SBS_program.device_disk.get_device_disk_usedSpace());
         }
 
         public void menuControl(ToolStripMenuItem menuOption, GroupBox sectionGroup)

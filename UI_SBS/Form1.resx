@@ -333,6 +333,39 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="text_admin.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="text_admin.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="text_admin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="text_admin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 13</value>
+  </data>
+  <data name="text_admin.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="text_admin.Text" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="text_admin.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;text_admin.Name" xml:space="preserve">
+    <value>text_admin</value>
+  </data>
+  <data name="&gt;&gt;text_admin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;text_admin.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;text_admin.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
     <value>textBox1</value>
   </data>
@@ -1441,13 +1474,13 @@
     <value>78, 21</value>
   </data>
   <data name="device_name.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 13</value>
+    <value>117, 13</value>
   </data>
   <data name="device_name.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="device_name.Text" xml:space="preserve">
-    <value>{device_name}</value>
+    <value>{get_device_name}</value>
   </data>
   <data name="&gt;&gt;device_name.Name" xml:space="preserve">
     <value>device_name</value>
@@ -1474,13 +1507,13 @@
     <value>59, 43</value>
   </data>
   <data name="device_ip.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 13</value>
+    <value>97, 13</value>
   </data>
   <data name="device_ip.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
   <data name="device_ip.Text" xml:space="preserve">
-    <value>192.160.0.000</value>
+    <value>{get_device_ip}</value>
   </data>
   <data name="&gt;&gt;device_ip.Name" xml:space="preserve">
     <value>device_ip</value>
@@ -1507,13 +1540,13 @@
     <value>65, 64</value>
   </data>
   <data name="session_id.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 13</value>
+    <value>101, 13</value>
   </data>
   <data name="session_id.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="session_id.Text" xml:space="preserve">
-    <value>S16N10</value>
+    <value>{get_session_id}</value>
   </data>
   <data name="&gt;&gt;session_id.Name" xml:space="preserve">
     <value>session_id</value>
@@ -1527,91 +1560,91 @@
   <data name="&gt;&gt;session_id.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+  <data name="disk_space.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="disk_space.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>244, 49</value>
+  <data name="disk_space.Location" type="System.Drawing.Point, System.Drawing">
+    <value>241, 49</value>
   </data>
-  <data name="label14.MinimumSize" type="System.Drawing.Size, System.Drawing">
+  <data name="disk_space.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>100, 15</value>
   </data>
-  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="disk_space.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 15</value>
   </data>
-  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+  <data name="disk_space.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
-  <data name="label14.Text" xml:space="preserve">
+  <data name="disk_space.Text" xml:space="preserve">
     <value>685 Gb / 750 Gb</value>
   </data>
-  <data name="label14.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="disk_space.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
-  <data name="&gt;&gt;label14.Name" xml:space="preserve">
-    <value>label14</value>
+  <data name="&gt;&gt;disk_space.Name" xml:space="preserve">
+    <value>disk_space</value>
   </data>
-  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+  <data name="&gt;&gt;disk_space.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+  <data name="&gt;&gt;disk_space.Parent" xml:space="preserve">
     <value>HomeDetailsGroup</value>
   </data>
-  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;disk_space.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="disk_one_capacity.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="disk_capacity.Location" type="System.Drawing.Point, System.Drawing">
     <value>232, 35</value>
   </data>
-  <data name="disk_one_capacity.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="disk_capacity.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 11</value>
   </data>
-  <data name="disk_one_capacity.TabIndex" type="System.Int32, mscorlib">
+  <data name="disk_capacity.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="&gt;&gt;disk_one_capacity.Name" xml:space="preserve">
-    <value>disk_one_capacity</value>
+  <data name="&gt;&gt;disk_capacity.Name" xml:space="preserve">
+    <value>disk_capacity</value>
   </data>
-  <data name="&gt;&gt;disk_one_capacity.Type" xml:space="preserve">
+  <data name="&gt;&gt;disk_capacity.Type" xml:space="preserve">
     <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;disk_one_capacity.Parent" xml:space="preserve">
+  <data name="&gt;&gt;disk_capacity.Parent" xml:space="preserve">
     <value>HomeDetailsGroup</value>
   </data>
-  <data name="&gt;&gt;disk_one_capacity.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;disk_capacity.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
+  <data name="disk_letter.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label13.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="disk_letter.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
   </data>
-  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="disk_letter.Location" type="System.Drawing.Point, System.Drawing">
     <value>313, 19</value>
   </data>
-  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="disk_letter.Size" type="System.Drawing.Size, System.Drawing">
     <value>19, 13</value>
   </data>
-  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+  <data name="disk_letter.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="label13.Text" xml:space="preserve">
+  <data name="disk_letter.Text" xml:space="preserve">
     <value>C:</value>
   </data>
-  <data name="&gt;&gt;label13.Name" xml:space="preserve">
-    <value>label13</value>
+  <data name="&gt;&gt;disk_letter.Name" xml:space="preserve">
+    <value>disk_letter</value>
   </data>
-  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+  <data name="&gt;&gt;disk_letter.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+  <data name="&gt;&gt;disk_letter.Parent" xml:space="preserve">
     <value>HomeDetailsGroup</value>
   </data>
-  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;disk_letter.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
@@ -1860,7 +1893,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADr8AAA6/ATgFUyQAAAAHdElNRQfnCwwFKiyh620TAAAG
+        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAADr4AAA6+AepCscAAAAAHdElNRQfnCwwFKiyh620TAAAG
         x0lEQVRoQ+1aa2wUVRSegIX+xcT4oEWKIBo1vkEFgw80rQYT32JMMT4TYoKJL34YI9Fo4uuPiQHabRF5
         0y0srablqWBEEcPbAII8BEWcmX11+9jd9vp9d+bu3t1Ot7Rdm2L2JF92986ZM9937znnznRqFKxgg2wf
         7YgZxtunjUnLrOFjq83i0iqreEx1bpRq8DqeD5RWmcXjfFZRRX3IuLcu5LL1sJnfhI2ShaYxsda6sMxn
@@ -1913,6 +1946,75 @@
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;unlock_password.Name" xml:space="preserve">
+    <value>unlock_password</value>
+  </data>
+  <data name="&gt;&gt;unlock_password.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;unlock_password.Parent" xml:space="preserve">
+    <value>unlock_panel</value>
+  </data>
+  <data name="&gt;&gt;unlock_password.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>unlock_panel</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;unlock_user.Name" xml:space="preserve">
+    <value>unlock_user</value>
+  </data>
+  <data name="&gt;&gt;unlock_user.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;unlock_user.Parent" xml:space="preserve">
+    <value>unlock_panel</value>
+  </data>
+  <data name="&gt;&gt;unlock_user.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>unlock_panel</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="unlock_panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 19</value>
+  </data>
+  <data name="unlock_panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 56</value>
+  </data>
+  <data name="unlock_panel.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;unlock_panel.Name" xml:space="preserve">
+    <value>unlock_panel</value>
+  </data>
+  <data name="&gt;&gt;unlock_panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;unlock_panel.Parent" xml:space="preserve">
+    <value>DetailsSettingsGroup</value>
+  </data>
+  <data name="&gt;&gt;unlock_panel.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="unlock_password.Location" type="System.Drawing.Point, System.Drawing">
     <value>62, 25</value>
@@ -2021,108 +2123,6 @@
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="text_admin.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="text_admin.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="text_admin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="text_admin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 13</value>
-  </data>
-  <data name="text_admin.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="text_admin.Text" xml:space="preserve">
-    <value>Admin</value>
-  </data>
-  <data name="text_admin.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;text_admin.Name" xml:space="preserve">
-    <value>text_admin</value>
-  </data>
-  <data name="&gt;&gt;text_admin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;text_admin.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;text_admin.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;unlock_password.Name" xml:space="preserve">
-    <value>unlock_password</value>
-  </data>
-  <data name="&gt;&gt;unlock_password.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;unlock_password.Parent" xml:space="preserve">
-    <value>unlock_panel</value>
-  </data>
-  <data name="&gt;&gt;unlock_password.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label16.Name" xml:space="preserve">
-    <value>label16</value>
-  </data>
-  <data name="&gt;&gt;label16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
-    <value>unlock_panel</value>
-  </data>
-  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;unlock_user.Name" xml:space="preserve">
-    <value>unlock_user</value>
-  </data>
-  <data name="&gt;&gt;unlock_user.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;unlock_user.Parent" xml:space="preserve">
-    <value>unlock_panel</value>
-  </data>
-  <data name="&gt;&gt;unlock_user.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label17.Name" xml:space="preserve">
-    <value>label17</value>
-  </data>
-  <data name="&gt;&gt;label17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
-    <value>unlock_panel</value>
-  </data>
-  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="unlock_panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 19</value>
-  </data>
-  <data name="unlock_panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 56</value>
-  </data>
-  <data name="unlock_panel.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;unlock_panel.Name" xml:space="preserve">
-    <value>unlock_panel</value>
-  </data>
-  <data name="&gt;&gt;unlock_panel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;unlock_panel.Parent" xml:space="preserve">
-    <value>DetailsSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;unlock_panel.ZOrder" xml:space="preserve">
-    <value>4</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

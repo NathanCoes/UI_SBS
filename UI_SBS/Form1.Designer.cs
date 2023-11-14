@@ -41,6 +41,7 @@
             this.ServerStatusIndicator = new System.Windows.Forms.Label();
             this.FTPStatusIndicator = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.text_admin = new System.Windows.Forms.Label();
             this.fileSettingsGroup = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.images_check = new System.Windows.Forms.CheckBox();
@@ -78,21 +79,20 @@
             this.device_ip = new System.Windows.Forms.Label();
             this.session_id = new System.Windows.Forms.Label();
             this.HomeDetailsGroup = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.disk_one_capacity = new System.Windows.Forms.ProgressBar();
-            this.label13 = new System.Windows.Forms.Label();
+            this.disk_space = new System.Windows.Forms.Label();
+            this.disk_capacity = new System.Windows.Forms.ProgressBar();
+            this.disk_letter = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.DetailsSettingsGroup = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.unlock_panel = new System.Windows.Forms.Panel();
             this.unlock_password = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.unlock_user = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.text_admin = new System.Windows.Forms.Label();
-            this.unlock_panel = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.fileSettingsGroup.SuspendLayout();
@@ -191,6 +191,13 @@
             this.panel1.Controls.Add(this.ServerStatusIndicator);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // text_admin
+            // 
+            resources.ApplyResources(this.text_admin, "text_admin");
+            this.text_admin.BackColor = System.Drawing.Color.Transparent;
+            this.text_admin.Name = "text_admin";
+            this.text_admin.Click += new System.EventHandler(this.label20_Click);
             // 
             // fileSettingsGroup
             // 
@@ -443,9 +450,9 @@
             // 
             // HomeDetailsGroup
             // 
-            this.HomeDetailsGroup.Controls.Add(this.label14);
-            this.HomeDetailsGroup.Controls.Add(this.disk_one_capacity);
-            this.HomeDetailsGroup.Controls.Add(this.label13);
+            this.HomeDetailsGroup.Controls.Add(this.disk_space);
+            this.HomeDetailsGroup.Controls.Add(this.disk_capacity);
+            this.HomeDetailsGroup.Controls.Add(this.disk_letter);
             this.HomeDetailsGroup.Controls.Add(this.label12);
             this.HomeDetailsGroup.Controls.Add(this.session_id);
             this.HomeDetailsGroup.Controls.Add(this.device_ip);
@@ -458,23 +465,23 @@
             this.HomeDetailsGroup.TabStop = false;
             this.HomeDetailsGroup.Enter += new System.EventHandler(this.HomeDetailsGroup_Enter);
             // 
-            // label14
+            // disk_space
             // 
-            resources.ApplyResources(this.label14, "label14");
-            this.label14.Name = "label14";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
+            resources.ApplyResources(this.disk_space, "disk_space");
+            this.disk_space.Name = "disk_space";
+            this.disk_space.Click += new System.EventHandler(this.label14_Click);
             // 
-            // disk_one_capacity
+            // disk_capacity
             // 
-            resources.ApplyResources(this.disk_one_capacity, "disk_one_capacity");
-            this.disk_one_capacity.Maximum = 750;
-            this.disk_one_capacity.Name = "disk_one_capacity";
-            this.disk_one_capacity.Value = 685;
+            resources.ApplyResources(this.disk_capacity, "disk_capacity");
+            this.disk_capacity.Maximum = 750;
+            this.disk_capacity.Name = "disk_capacity";
+            this.disk_capacity.Value = 300;
             // 
-            // label13
+            // disk_letter
             // 
-            resources.ApplyResources(this.label13, "label13");
-            this.label13.Name = "label13";
+            resources.ApplyResources(this.disk_letter, "disk_letter");
+            this.disk_letter.Name = "disk_letter";
             // 
             // label12
             // 
@@ -516,6 +523,15 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
+            // unlock_panel
+            // 
+            this.unlock_panel.Controls.Add(this.unlock_password);
+            this.unlock_panel.Controls.Add(this.label16);
+            this.unlock_panel.Controls.Add(this.unlock_user);
+            this.unlock_panel.Controls.Add(this.label17);
+            resources.ApplyResources(this.unlock_panel, "unlock_panel");
+            this.unlock_panel.Name = "unlock_panel";
+            // 
             // unlock_password
             // 
             resources.ApplyResources(this.unlock_password, "unlock_password");
@@ -537,22 +553,6 @@
             resources.ApplyResources(this.label17, "label17");
             this.label17.Name = "label17";
             this.label17.Click += new System.EventHandler(this.label17_Click);
-            // 
-            // text_admin
-            // 
-            resources.ApplyResources(this.text_admin, "text_admin");
-            this.text_admin.BackColor = System.Drawing.Color.Transparent;
-            this.text_admin.Name = "text_admin";
-            this.text_admin.Click += new System.EventHandler(this.label20_Click);
-            // 
-            // unlock_panel
-            // 
-            this.unlock_panel.Controls.Add(this.unlock_password);
-            this.unlock_panel.Controls.Add(this.label16);
-            this.unlock_panel.Controls.Add(this.unlock_user);
-            this.unlock_panel.Controls.Add(this.label17);
-            resources.ApplyResources(this.unlock_panel, "unlock_panel");
-            this.unlock_panel.Name = "unlock_panel";
             // 
             // SBS
             // 
@@ -642,10 +642,10 @@
         private System.Windows.Forms.Label device_ip;
         private System.Windows.Forms.Label session_id;
         private System.Windows.Forms.GroupBox HomeDetailsGroup;
-        private System.Windows.Forms.ProgressBar disk_one_capacity;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ProgressBar disk_capacity;
+        private System.Windows.Forms.Label disk_letter;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label disk_space;
         private System.Windows.Forms.ToolStripMenuItem MenuDetailsOption;
         private System.Windows.Forms.GroupBox DetailsSettingsGroup;
         private System.Windows.Forms.TextBox unlock_password;
