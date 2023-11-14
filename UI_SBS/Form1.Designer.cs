@@ -48,7 +48,7 @@
             this.documents_check = new System.Windows.Forms.CheckBox();
             this.desktop_check = new System.Windows.Forms.CheckBox();
             this.saveFileSettings = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.unlock_btn = new System.Windows.Forms.Button();
             this.ftp_server_input = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ftp_port_input = new System.Windows.Forms.TextBox();
@@ -87,10 +87,12 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.unlock_password = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.unlock_user = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.text_admin = new System.Windows.Forms.Label();
+            this.unlock_panel = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.fileSettingsGroup.SuspendLayout();
@@ -99,6 +101,7 @@
             this.HomeDetailsGroup.SuspendLayout();
             this.DetailsSettingsGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.unlock_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // ServerStatus
@@ -181,6 +184,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.text_admin);
             this.panel1.Controls.Add(this.FTPStatusIndicator);
             this.panel1.Controls.Add(this.ServerStatus);
             this.panel1.Controls.Add(this.FTPStatus);
@@ -247,12 +251,12 @@
             this.saveFileSettings.UseVisualStyleBackColor = false;
             this.saveFileSettings.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // button1
+            // unlock_btn
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            resources.ApplyResources(this.unlock_btn, "unlock_btn");
+            this.unlock_btn.Name = "unlock_btn";
+            this.unlock_btn.UseVisualStyleBackColor = true;
+            this.unlock_btn.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // ftp_server_input
             // 
@@ -424,6 +428,7 @@
             // 
             resources.ApplyResources(this.device_name, "device_name");
             this.device_name.Name = "device_name";
+            this.device_name.Click += new System.EventHandler(this.device_name_Click);
             // 
             // device_ip
             // 
@@ -482,11 +487,8 @@
             this.DetailsSettingsGroup.Controls.Add(this.label18);
             this.DetailsSettingsGroup.Controls.Add(this.label15);
             this.DetailsSettingsGroup.Controls.Add(this.pictureBox1);
-            this.DetailsSettingsGroup.Controls.Add(this.textBox4);
-            this.DetailsSettingsGroup.Controls.Add(this.label16);
-            this.DetailsSettingsGroup.Controls.Add(this.textBox5);
-            this.DetailsSettingsGroup.Controls.Add(this.label17);
-            this.DetailsSettingsGroup.Controls.Add(this.button1);
+            this.DetailsSettingsGroup.Controls.Add(this.unlock_panel);
+            this.DetailsSettingsGroup.Controls.Add(this.unlock_btn);
             resources.ApplyResources(this.DetailsSettingsGroup, "DetailsSettingsGroup");
             this.DetailsSettingsGroup.Name = "DetailsSettingsGroup";
             this.DetailsSettingsGroup.TabStop = false;
@@ -514,25 +516,43 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
-            // textBox4
+            // unlock_password
             // 
-            resources.ApplyResources(this.textBox4, "textBox4");
-            this.textBox4.Name = "textBox4";
+            resources.ApplyResources(this.unlock_password, "unlock_password");
+            this.unlock_password.Name = "unlock_password";
             // 
             // label16
             // 
             resources.ApplyResources(this.label16, "label16");
             this.label16.Name = "label16";
             // 
-            // textBox5
+            // unlock_user
             // 
-            resources.ApplyResources(this.textBox5, "textBox5");
-            this.textBox5.Name = "textBox5";
+            resources.ApplyResources(this.unlock_user, "unlock_user");
+            this.unlock_user.Name = "unlock_user";
+            this.unlock_user.TextChanged += new System.EventHandler(this.textBox5_TextChanged_1);
             // 
             // label17
             // 
             resources.ApplyResources(this.label17, "label17");
             this.label17.Name = "label17";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
+            // 
+            // text_admin
+            // 
+            resources.ApplyResources(this.text_admin, "text_admin");
+            this.text_admin.BackColor = System.Drawing.Color.Transparent;
+            this.text_admin.Name = "text_admin";
+            this.text_admin.Click += new System.EventHandler(this.label20_Click);
+            // 
+            // unlock_panel
+            // 
+            this.unlock_panel.Controls.Add(this.unlock_password);
+            this.unlock_panel.Controls.Add(this.label16);
+            this.unlock_panel.Controls.Add(this.unlock_user);
+            this.unlock_panel.Controls.Add(this.label17);
+            resources.ApplyResources(this.unlock_panel, "unlock_panel");
+            this.unlock_panel.Name = "unlock_panel";
             // 
             // SBS
             // 
@@ -566,6 +586,8 @@
             this.DetailsSettingsGroup.ResumeLayout(false);
             this.DetailsSettingsGroup.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.unlock_panel.ResumeLayout(false);
+            this.unlock_panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -589,7 +611,7 @@
         private System.Windows.Forms.CheckBox documents_check;
         private System.Windows.Forms.CheckBox desktop_check;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button unlock_btn;
         private System.Windows.Forms.ToolStripMenuItem MenuHomeOption;
         private System.Windows.Forms.TextBox ftp_server_input;
         private System.Windows.Forms.Label label1;
@@ -626,14 +648,16 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ToolStripMenuItem MenuDetailsOption;
         private System.Windows.Forms.GroupBox DetailsSettingsGroup;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox unlock_password;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox unlock_user;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label text_admin;
+        private System.Windows.Forms.Panel unlock_panel;
     }
 }
 

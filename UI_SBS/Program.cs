@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.NetworkInformation;
 
 namespace UI_SBS
 {
@@ -27,6 +29,10 @@ namespace UI_SBS
     public class SBS_program
     {
         public static DateTime dateTime = DateTime.UtcNow.Date;
+
+        public static string sbs_user = "SBS_Admin";
+        public static string sbs_password = "bBiFDclTkxZZutWaDDkwfQ=="; // SBS2023!
+
         public static void validateDocs()
         {
             string[] folders = new string[]
@@ -43,23 +49,16 @@ namespace UI_SBS
                 @" C:\Users\Sistemas\AppData\Roaming\SBS\config\ftp_server\settings.sbs"
             };
 
+            string temp = "";
+
             try
             {
-                string log_file = @" C:\Users\Sistemas\AppData\Roaming\SBS\logs\log_" + dateTime.ToString("ddMMyyyy") + ".txt";
-                if (!File.Exists(log_file))
-                {
-                    using (StreamWriter file = File.AppendText(log_file))
-                    {
-                        file.WriteLine("[" + DateTime.Now + "] >> File created");
-                    }
-                }
-
                 foreach (string folder in folders)
                 {
                     if (!Directory.Exists(folder))
                     {
                         Directory.CreateDirectory(folder);
-                        SBS_program.log("Carpeta creada >> " + folder);
+                        temp += $"Carpeta creada >> {folder}\n";
                     }
                 }
 
@@ -75,10 +74,12 @@ namespace UI_SBS
                             file.WriteLine("User:");
                             file.WriteLine("Password:");
                             file.Close();
-                            SBS_program.log("Carpeta creada >> " + file);
+                            temp += $"Archivo creado >> {s_file}\n";
                         }
                     }
                 }
+
+                SBS_program.log(temp);
             }
             catch (Exception ex)
             {
@@ -139,6 +140,44 @@ namespace UI_SBS
             {
                 file.WriteLine("[" + DateTime.Now + $"] >> {msg}");
             }
+        }
+
+        public static string get_sbs_user()
+        {
+            return sbs_user;
+        }
+
+        public static string get_sbs_password()
+        {
+            return sbs_password;
+        }
+
+        public static string get_device_name()
+        {
+            return Environment.MachineName;
+        }
+
+        public static IPv4InterfaceStatistics get_device_ip()
+        {
+            // Obtener todas las interfaces de red disponibles
+            NetworkInterface[] interfaces = NetworkInterface.GetAllNetworkInterfaces();
+
+            foreach (NetworkInterface interfaz in interfaces)
+            {
+                // Filtrar solo las interfaces activas y que no sean loopback
+                if (interfaz.OperationalStatus == OperationalStatus.Up && !interfaz.Description.ToLowerInvariant().Contains("loopback"))
+                {
+                    Console.WriteLine($"Interfaz de red activa: {interfaz.Description}");
+
+                    // Puedes acceder a más detalles de la interfaz si es necesario
+                    Console.WriteLine($"Tipo de interfaz: {interfaz.NetworkInterfaceType}");
+                    Console.WriteLine($"Dirección física (MAC): {BitConverter.ToString(interfaz.GetPhysicalAddress().GetAddressBytes())}");
+
+                    return interfaz.GetIPv4Statistics();
+                }
+            }
+
+            return null;
         }
     }
 }

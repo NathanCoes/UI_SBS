@@ -16,13 +16,65 @@ namespace UI_SBS
 
         public ToolStripMenuItem last_option;
         public GroupBox lastSection;
+        public bool admin = false;
 
         public SBS()
         {
             InitializeComponent();
             ftp_user_input.PasswordChar = '•';
             service_password_input.PasswordChar = '•';
+            unlock_password.PasswordChar = '•';
             MenuHomeOption.BackColor= System.Drawing.SystemColors.ControlLight;
+            device_name.Text = SBS_program.get_device_name();
+            device_ip.Text = Convert.ToString(SBS_program.get_device_ip());
+            Console.WriteLine(SBS_program.get_device_ip());
+        }
+
+        public void menuControl(ToolStripMenuItem menuOption, GroupBox sectionGroup)
+        {
+            if (last_option != null)
+            {
+                last_option.BackColor = System.Drawing.SystemColors.Control;
+                lastSection.Visible = false;
+            }
+            else
+            {
+                MenuHomeOption.BackColor = System.Drawing.SystemColors.Control;
+                HomeDetailsGroup.Visible = false;
+            }
+
+            menuOption.BackColor = System.Drawing.SystemColors.ControlLight;
+            sectionGroup.Visible = true;
+            last_option = menuOption;
+            lastSection = sectionGroup;
+        }
+
+        public void unlock()
+        {
+            if (admin)
+            {
+                UI_SBS.SBS_program.alert("Log in", "Sessions", "OK", "Asterisk");
+                UI_SBS.SBS_program.log($"Se ha iniciado sesión con la cuenta de administrador {UI_SBS.SBS_program.get_sbs_user()}");
+                unlock_user.Text = "";
+                unlock_password.Text = "";
+                unlock_btn.Text = "Lock";
+                text_admin.Visible = true;
+                ServerSettingsGroup.Enabled = true;
+                FTPSettingsGroup.Enabled = true;
+                fileSettingsGroup.Enabled = true;
+                unlock_panel.Enabled = false;
+            }
+            else
+            {
+                UI_SBS.SBS_program.alert("Log out", "Sessions", "OK", "Asterisk");
+                UI_SBS.SBS_program.log($"Se ha cerrado sesión con la cuenta de administrador {UI_SBS.SBS_program.get_sbs_user()}");
+                unlock_btn.Text = "Unlock";
+                text_admin.Visible = false;
+                ServerSettingsGroup.Enabled = false;
+                FTPSettingsGroup.Enabled = false;
+                fileSettingsGroup.Enabled = false;
+                unlock_panel.Enabled = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -132,6 +184,36 @@ namespace UI_SBS
 
         private void button1_Click_2(object sender, EventArgs e)
         {
+            string user = unlock_user.Text;
+            string password = UI_SBS.security.Encrypt(unlock_password.Text);
+            string msg = "";
+
+
+            if (user == UI_SBS.SBS_program.get_sbs_user() && password == UI_SBS.SBS_program.get_sbs_password() && admin == false)
+            {
+                admin = true;
+            }
+            else if (admin == true)
+            {
+                admin = false;
+            }
+            else
+            {
+                if (user == null)
+                {
+                    msg += "El campo de Usuario está vacío.\n";
+                }
+                if (password == null)
+                {
+                    msg += "El campo de Password está vacío.\n";
+                }
+                UI_SBS.SBS_program.alert(msg, "Sessions", "OK", "Asterisk");
+            }
+
+            if (msg == "")
+            {
+                unlock();
+            }
 
         }
 
@@ -220,23 +302,24 @@ namespace UI_SBS
             menuControl(MenuFTPOption, FTPSettingsGroup);
         }
 
-        public void menuControl(ToolStripMenuItem menuOption, GroupBox sectionGroup)
+        private void textBox5_TextChanged_1(object sender, EventArgs e)
         {
-            if (last_option != null)
-            {
-                last_option.BackColor = System.Drawing.SystemColors.Control;
-                lastSection.Visible = false;
-            }
-            else
-            {
-                MenuHomeOption.BackColor = System.Drawing.SystemColors.Control;
-                HomeDetailsGroup.Visible = false;
-            }
 
-            menuOption.BackColor = System.Drawing.SystemColors.ControlLight;
-            sectionGroup.Visible = true;
-            last_option = menuOption;
-            lastSection = sectionGroup;
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void device_name_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

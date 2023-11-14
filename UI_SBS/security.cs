@@ -7,10 +7,10 @@ namespace UI_SBS
 {
     public class security
     {
-        public string key = "SBSKey_09112023!"; // Modify according to your preference <-> 16 bytes for AES-128 
-        public string iv = "SBS_iv_09112023!";  // Modify according to your preference <-> 16 bytes for AES-128
+        public static string key = "SBSKey_09112023!"; // Modify according to your preference <-> 16 bytes for AES-128 
+        public static string iv = "SBS_iv_09112023!";  // Modify according to your preference <-> 16 bytes for AES-128
 
-        public string Encrypt(string plainText)
+        public static string Encrypt(string plainText)
         {
             using (Aes aesAlg = Aes.Create())
             {
@@ -34,7 +34,7 @@ namespace UI_SBS
             }
         }
 
-        public string Decrypt(string cipherText)
+        public static string Decrypt(string cipherText)
         {
             using (Aes aesAlg = Aes.Create())
             {
