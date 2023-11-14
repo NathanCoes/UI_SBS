@@ -12,14 +12,14 @@ El proposito es realizar copias de seguridad de los equipos windows sin mayor co
 
 App de escritorio desarrollado en **.Net Framework**
 
+**Paquetes necesarios**
+```
+Install-Package Microsoft.Toolkit.Uwp.Notifications -Version 7.0.2
+```
+
 
 ***>>>> Futuras actualizaciones <<<<***
 
 * Configurar desde el servidor las carpetas a respaldar.
 * El cliente será capas de cargar las configuraciones provinientes del servidor.
 * Remote UI CMD
-
-**Paquetes necesarios**
-```
-Install-Package Microsoft.Toolkit.Uwp.Notifications -Version 7.0.2
-```
