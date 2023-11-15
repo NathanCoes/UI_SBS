@@ -228,20 +228,5 @@ namespace UI_SBS
         {
             return Math.Round(bytes / (1024.0 * 1024.0 * 1024.0), 2);
         }
-
-        static void notification(string titulo, string contenido)
-        {
-            // Crear la notificación Toast
-            ToastContentBuilder contentBuilder = new ToastContentBuilder()
-                .AddText(titulo)
-                .AddText(contenido);
-
-            // Obtener el XML de la notificación Toast
-            XmlDocument toastXml = contentBuilder.GetXml();
-
-            // Mostrar la notificación Toast
-            ToastNotification toast = new ToastNotification(toastXml);
-            ToastNotificationManager.CreateToastNotifier().Show(toast);
-        }
     }
 }

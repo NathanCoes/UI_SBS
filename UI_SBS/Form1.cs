@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Toolkit.Uwp.Notifications;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,13 @@ namespace UI_SBS
             disk_letter.Text = SBS_program.driveLetter+":";
             disk_capacity.Maximum = Convert.ToInt32(SBS_program.device_disk.get_device_disk_totalSpace());
             disk_capacity.Value = Convert.ToInt32(SBS_program.device_disk.get_device_disk_usedSpace());
+
+            new ToastContentBuilder()
+            .AddArgument("action", "viewConversation")
+            .AddArgument("conversationId", 9813)
+            .AddText("Andrew sent you a picture")
+            .AddText("Check this out, The Enchantments in Washington!")
+            .Show();
         }
 
         public void menuControl(ToolStripMenuItem menuOption, GroupBox sectionGroup)
@@ -323,6 +331,11 @@ namespace UI_SBS
         private void device_name_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void label12_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
