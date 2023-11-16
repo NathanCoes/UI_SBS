@@ -4,22 +4,26 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Services.Description;
 using System.Windows.Forms;
 using UI_SBS;
 
 namespace UI_SBS
 {
-    public partial class SBS : Form
+    public partial class SBS_form : Form
     {
 
         public ToolStripMenuItem last_option;
         public GroupBox lastSection;
         public bool admin = false;
+        private OpenFileDialog loadSettings;
 
-        public SBS()
+        public SBS_form()
         {
             InitializeComponent();
             ftp_user_input.PasswordChar = '•';
@@ -32,13 +36,6 @@ namespace UI_SBS
             disk_letter.Text = SBS_program.driveLetter+":";
             disk_capacity.Maximum = Convert.ToInt32(SBS_program.device_disk.get_device_disk_totalSpace());
             disk_capacity.Value = Convert.ToInt32(SBS_program.device_disk.get_device_disk_usedSpace());
-
-            new ToastContentBuilder()
-            .AddArgument("action", "viewConversation")
-            .AddArgument("conversationId", 9813)
-            .AddText("Andrew sent you a picture")
-            .AddText("Check this out, The Enchantments in Washington!")
-            .Show();
         }
 
         public void menuControl(ToolStripMenuItem menuOption, GroupBox sectionGroup)
@@ -70,6 +67,10 @@ namespace UI_SBS
                 unlock_password.Text = "";
                 unlock_btn.Text = "Lock";
                 text_admin.Visible = true;
+                MenuServerOption.Visible = true;
+                MenuFTPOption.Visible = true;
+                MenuFileOption.Visible = true;
+                load_settings.Enabled = true;
                 ServerSettingsGroup.Enabled = true;
                 FTPSettingsGroup.Enabled = true;
                 fileSettingsGroup.Enabled = true;
@@ -81,9 +82,13 @@ namespace UI_SBS
                 UI_SBS.SBS_program.log($"Se ha cerrado sesión con la cuenta de administrador {UI_SBS.SBS_program.get_sbs_user()}");
                 unlock_btn.Text = "Unlock";
                 text_admin.Visible = false;
+                MenuServerOption.Visible = false;
+                MenuFTPOption.Visible = false;
+                MenuFileOption.Visible = false;
                 ServerSettingsGroup.Enabled = false;
                 FTPSettingsGroup.Enabled = false;
                 fileSettingsGroup.Enabled = false;
+                load_settings.Enabled = false;
                 unlock_panel.Enabled = true;
             }
         }
@@ -135,7 +140,14 @@ namespace UI_SBS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            if (SBS_program.server)
+            {
+                this.Text = "[Server] System Backup Service";
+            }
+            else
+            {
+                this.Text = "[Client] System Backup Service";
+            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -336,6 +348,26 @@ namespace UI_SBS
         private void label12_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            loadSettings = new OpenFileDialog();
+
+            if (loadSettings.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    var sr = new StreamReader(loadSettings.FileName);
+                    Console.WriteLine(sr.ReadToEnd());
+                }
+                catch (SecurityException ex)
+                {
+                    SBS_program.log($"Security error.\n\nError message: {ex.Message}\n\n" +
+                    $"Details:\n\n{ex.StackTrace}");
+                    UI_SBS.SBS_program.alert(ex.Message, "[File System] Oops!", "OK", "Asterisk");
+                }
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace UI_SBS
 {
-    partial class SBS
+    partial class SBS_form
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SBS));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SBS_form));
             this.ServerStatus = new System.Windows.Forms.Label();
             this.FTPStatus = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -84,6 +85,7 @@
             this.disk_letter = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.DetailsSettingsGroup = new System.Windows.Forms.GroupBox();
+            this.load_settings = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -93,6 +95,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.unlock_user = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.fileSettingsGroup.SuspendLayout();
@@ -491,6 +494,7 @@
             // 
             // DetailsSettingsGroup
             // 
+            this.DetailsSettingsGroup.Controls.Add(this.load_settings);
             this.DetailsSettingsGroup.Controls.Add(this.label19);
             this.DetailsSettingsGroup.Controls.Add(this.label18);
             this.DetailsSettingsGroup.Controls.Add(this.label15);
@@ -500,6 +504,13 @@
             resources.ApplyResources(this.DetailsSettingsGroup, "DetailsSettingsGroup");
             this.DetailsSettingsGroup.Name = "DetailsSettingsGroup";
             this.DetailsSettingsGroup.TabStop = false;
+            // 
+            // load_settings
+            // 
+            resources.ApplyResources(this.load_settings, "load_settings");
+            this.load_settings.Name = "load_settings";
+            this.load_settings.UseVisualStyleBackColor = true;
+            this.load_settings.Click += new System.EventHandler(this.button1_Click_3);
             // 
             // label19
             // 
@@ -555,12 +566,16 @@
             this.label17.Name = "label17";
             this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
-            // SBS
+            // notifyIcon1
+            // 
+            resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
+            // 
+            // SBS_form
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             resources.ApplyResources(this, "$this");
-            this.Controls.Add(this.HomeDetailsGroup);
             this.Controls.Add(this.DetailsSettingsGroup);
+            this.Controls.Add(this.HomeDetailsGroup);
             this.Controls.Add(this.ServerSettingsGroup);
             this.Controls.Add(this.fileSettingsGroup);
             this.Controls.Add(this.FTPSettingsGroup);
@@ -569,7 +584,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.Name = "SBS";
+            this.Name = "SBS_form";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -659,6 +674,8 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label text_admin;
         private System.Windows.Forms.Panel unlock_panel;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Button load_settings;
     }
 }
 

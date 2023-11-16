@@ -4,7 +4,6 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.NetworkInformation;
 using Microsoft.Toolkit.Uwp.Notifications;
-using System.Xml;
 
 
 namespace UI_SBS
@@ -20,8 +19,8 @@ namespace UI_SBS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             SBS_program.validateDocs();
-            Application.Run(new SBS());
-            
+            SBS_program.device_disk.validation_disk_space();
+            Application.Run(new SBS_form());
         }
     }
 
@@ -31,9 +30,24 @@ namespace UI_SBS
         public static string sbs_user = "SBS_Admin";
         public static string sbs_password = "bBiFDclTkxZZutWaDDkwfQ=="; // SBS2023!
         public static string base_folder = $@" {driveLetter}:\Users\{SBS_program.get_device_username()}\AppData\Roaming";
+        public static bool server = true;
 
         public static DateTime dateTime = DateTime.UtcNow.Date;        
         public static DriveInfo driveInfo = new DriveInfo(driveLetter);
+        public static System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+        public static bool diskFlag = false;
+
+        public static void runSettings()
+        {
+            if (server)
+            {
+                
+            }
+            else
+            {
+
+            }
+        }
 
         public static void validateDocs()
         {
@@ -222,11 +236,64 @@ namespace UI_SBS
                     return 0;
                 }
             }
+
+            public static int validation_disk_space()
+            {
+                
+                timer.Tick += new EventHandler(StatusDisk);
+                timer.Interval = 1000*60*60;
+                if (diskFlag == false)
+                {
+                    timer.Interval = 1000;
+                    diskFlag = true;
+                }
+                else
+                {
+                    timer.Interval = 1000 * 60 * 60;
+                }
+                timer.Start();
+                Application.DoEvents();
+
+                return 0;
+
+            }
+
+            private static void StatusDisk(Object myObject, EventArgs myEventArgs)
+            {
+
+                if (diskFlag == false)
+                {
+                    timer.Interval = 1000;
+                    diskFlag = true;
+                }
+                else
+                {
+                    timer.Interval = 1000 * 60 * 60;
+                }
+                if ((get_device_disk_totalSpace() - get_device_disk_usedSpace()) < 25)
+                {
+                    notification("Su disco duro está por llenarse, favor de realizar un mantenimiento.", "Espacio de disco duro");
+                }
+                else if ((get_device_disk_totalSpace() - get_device_disk_usedSpace()) < 100)
+                {
+                    notification("Su disco duro está casi lleno, por favor, planifique un mantenimiento.", "Espacio de disco duro");
+                }
+            }
         }
 
         static double ConvertBytesToGB(long bytes)
         {
             return Math.Round(bytes / (1024.0 * 1024.0 * 1024.0), 2);
+        }
+
+        static void notification(string msg, string title)
+        {
+            new ToastContentBuilder()
+            .AddArgument("action", "viewConversation")
+            .AddArgument("conversationId", 9813)
+            .AddText(title)
+            .AddText(msg)
+            .Show();
         }
     }
 }
