@@ -180,6 +180,51 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="MenuHomeOption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 22</value>
+  </data>
+  <data name="MenuHomeOption.Text" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="MenuFileOption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 22</value>
+  </data>
+  <data name="MenuFileOption.Text" xml:space="preserve">
+    <value>File settings</value>
+  </data>
+  <data name="MenuFileOption.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="MenuFTPOption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 22</value>
+  </data>
+  <data name="MenuFTPOption.Text" xml:space="preserve">
+    <value>FTP settings</value>
+  </data>
+  <data name="MenuFTPOption.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="MenuServerOption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 22</value>
+  </data>
+  <data name="MenuServerOption.Text" xml:space="preserve">
+    <value>Server settings</value>
+  </data>
+  <data name="MenuServerOption.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="MenuDetailsOption.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 22</value>
+  </data>
+  <data name="MenuDetailsOption.Text" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 20</value>
+  </data>
+  <data name="Menu.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -203,51 +248,6 @@
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="Menu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 20</value>
-  </data>
-  <data name="Menu.Text" xml:space="preserve">
-    <value>Options</value>
-  </data>
-  <data name="MenuHomeOption.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="MenuHomeOption.Text" xml:space="preserve">
-    <value>Home</value>
-  </data>
-  <data name="MenuFileOption.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="MenuFileOption.Text" xml:space="preserve">
-    <value>File settings</value>
-  </data>
-  <data name="MenuFileOption.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="MenuFTPOption.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="MenuFTPOption.Text" xml:space="preserve">
-    <value>FTP settings</value>
-  </data>
-  <data name="MenuFTPOption.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="MenuServerOption.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="MenuServerOption.Text" xml:space="preserve">
-    <value>Server settings</value>
-  </data>
-  <data name="MenuServerOption.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="MenuDetailsOption.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
-  </data>
-  <data name="MenuDetailsOption.Text" xml:space="preserve">
-    <value>Details</value>
   </data>
   <data name="ServerStatusIndicator.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -309,39 +309,6 @@
   <data name="&gt;&gt;FTPStatusIndicator.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;text_admin.Name" xml:space="preserve">
-    <value>text_admin</value>
-  </data>
-  <data name="&gt;&gt;text_admin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;text_admin.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;text_admin.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 151</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 34</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <data name="text_admin.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -375,95 +342,26 @@
   <data name="&gt;&gt;text_admin.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 151</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 34</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>fileSettingsGroup</value>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="&gt;&gt;images_check.Name" xml:space="preserve">
-    <value>images_check</value>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;images_check.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;images_check.Parent" xml:space="preserve">
-    <value>fileSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;images_check.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;downloads_check.Name" xml:space="preserve">
-    <value>downloads_check</value>
-  </data>
-  <data name="&gt;&gt;downloads_check.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;downloads_check.Parent" xml:space="preserve">
-    <value>fileSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;downloads_check.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;documents_check.Name" xml:space="preserve">
-    <value>documents_check</value>
-  </data>
-  <data name="&gt;&gt;documents_check.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;documents_check.Parent" xml:space="preserve">
-    <value>fileSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;documents_check.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;desktop_check.Name" xml:space="preserve">
-    <value>desktop_check</value>
-  </data>
-  <data name="&gt;&gt;desktop_check.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;desktop_check.Parent" xml:space="preserve">
-    <value>fileSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;desktop_check.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="fileSettingsGroup.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="fileSettingsGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 27</value>
-  </data>
-  <data name="fileSettingsGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 118</value>
-  </data>
-  <data name="fileSettingsGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="fileSettingsGroup.Text" xml:space="preserve">
-    <value>File Settings</value>
-  </data>
-  <data name="fileSettingsGroup.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;fileSettingsGroup.Name" xml:space="preserve">
-    <value>fileSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;fileSettingsGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;fileSettingsGroup.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;fileSettingsGroup.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>222, 19</value>
@@ -600,6 +498,36 @@
   <data name="&gt;&gt;desktop_check.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="fileSettingsGroup.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="fileSettingsGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
+  </data>
+  <data name="fileSettingsGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>361, 118</value>
+  </data>
+  <data name="fileSettingsGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="fileSettingsGroup.Text" xml:space="preserve">
+    <value>File Settings</value>
+  </data>
+  <data name="fileSettingsGroup.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;fileSettingsGroup.Name" xml:space="preserve">
+    <value>fileSettingsGroup</value>
+  </data>
+  <data name="&gt;&gt;fileSettingsGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fileSettingsGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;fileSettingsGroup.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="saveFileSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>298, 157</value>
   </data>
@@ -652,7 +580,7 @@
     <value>DetailsSettingsGroup</value>
   </data>
   <data name="&gt;&gt;unlock_btn.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="ftp_server_input.Location" type="System.Drawing.Point, System.Drawing">
     <value>62, 23</value>
@@ -957,156 +885,6 @@
   <data name="&gt;&gt;FTPSettingsGroup.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;server_test.Name" xml:space="preserve">
-    <value>server_test</value>
-  </data>
-  <data name="&gt;&gt;server_test.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;server_test.Parent" xml:space="preserve">
-    <value>ServerSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;server_test.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
-    <value>textBox2</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
-    <value>ServerSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>ServerSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;service_password_input.Name" xml:space="preserve">
-    <value>service_password_input</value>
-  </data>
-  <data name="&gt;&gt;service_password_input.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;service_password_input.Parent" xml:space="preserve">
-    <value>ServerSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;service_password_input.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>ServerSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;service_user_input.Name" xml:space="preserve">
-    <value>service_user_input</value>
-  </data>
-  <data name="&gt;&gt;service_user_input.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;service_user_input.Parent" xml:space="preserve">
-    <value>ServerSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;service_user_input.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>ServerSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;service_port_input.Name" xml:space="preserve">
-    <value>service_port_input</value>
-  </data>
-  <data name="&gt;&gt;service_port_input.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;service_port_input.Parent" xml:space="preserve">
-    <value>ServerSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;service_port_input.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>ServerSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;service_server_input.Name" xml:space="preserve">
-    <value>service_server_input</value>
-  </data>
-  <data name="&gt;&gt;service_server_input.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;service_server_input.Parent" xml:space="preserve">
-    <value>ServerSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;service_server_input.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="ServerSettingsGroup.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ServerSettingsGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 27</value>
-  </data>
-  <data name="ServerSettingsGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 118</value>
-  </data>
-  <data name="ServerSettingsGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="ServerSettingsGroup.Text" xml:space="preserve">
-    <value>Server Settings</value>
-  </data>
-  <data name="ServerSettingsGroup.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;ServerSettingsGroup.Name" xml:space="preserve">
-    <value>ServerSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;ServerSettingsGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ServerSettingsGroup.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ServerSettingsGroup.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="server_test.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -1380,6 +1158,36 @@
   <data name="&gt;&gt;service_server_input.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="ServerSettingsGroup.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="ServerSettingsGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
+  </data>
+  <data name="ServerSettingsGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>361, 118</value>
+  </data>
+  <data name="ServerSettingsGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="ServerSettingsGroup.Text" xml:space="preserve">
+    <value>Server Settings</value>
+  </data>
+  <data name="ServerSettingsGroup.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ServerSettingsGroup.Name" xml:space="preserve">
+    <value>ServerSettingsGroup</value>
+  </data>
+  <data name="&gt;&gt;ServerSettingsGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ServerSettingsGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ServerSettingsGroup.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1569,78 +1377,6 @@
   <data name="&gt;&gt;session_id.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;disk_space.Name" xml:space="preserve">
-    <value>disk_space</value>
-  </data>
-  <data name="&gt;&gt;disk_space.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;disk_space.Parent" xml:space="preserve">
-    <value>HomeDetailsGroup</value>
-  </data>
-  <data name="&gt;&gt;disk_space.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;disk_capacity.Name" xml:space="preserve">
-    <value>disk_capacity</value>
-  </data>
-  <data name="&gt;&gt;disk_capacity.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;disk_capacity.Parent" xml:space="preserve">
-    <value>HomeDetailsGroup</value>
-  </data>
-  <data name="&gt;&gt;disk_capacity.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;disk_letter.Name" xml:space="preserve">
-    <value>disk_letter</value>
-  </data>
-  <data name="&gt;&gt;disk_letter.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;disk_letter.Parent" xml:space="preserve">
-    <value>HomeDetailsGroup</value>
-  </data>
-  <data name="&gt;&gt;disk_letter.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
-  </data>
-  <data name="&gt;&gt;label12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
-    <value>HomeDetailsGroup</value>
-  </data>
-  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="HomeDetailsGroup.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 27</value>
-  </data>
-  <data name="HomeDetailsGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 118</value>
-  </data>
-  <data name="HomeDetailsGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="HomeDetailsGroup.Text" xml:space="preserve">
-    <value>Home</value>
-  </data>
-  <data name="&gt;&gt;HomeDetailsGroup.Name" xml:space="preserve">
-    <value>HomeDetailsGroup</value>
-  </data>
-  <data name="&gt;&gt;HomeDetailsGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HomeDetailsGroup.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;HomeDetailsGroup.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="disk_space.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1755,134 +1491,29 @@
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;load_settings.Name" xml:space="preserve">
-    <value>load_settings</value>
-  </data>
-  <data name="&gt;&gt;load_settings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;load_settings.Parent" xml:space="preserve">
-    <value>DetailsSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;load_settings.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label19.Name" xml:space="preserve">
-    <value>label19</value>
-  </data>
-  <data name="&gt;&gt;label19.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
-    <value>DetailsSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label18.Name" xml:space="preserve">
-    <value>label18</value>
-  </data>
-  <data name="&gt;&gt;label18.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
-    <value>DetailsSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label15.Name" xml:space="preserve">
-    <value>label15</value>
-  </data>
-  <data name="&gt;&gt;label15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
-    <value>DetailsSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>DetailsSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;unlock_panel.Name" xml:space="preserve">
-    <value>unlock_panel</value>
-  </data>
-  <data name="&gt;&gt;unlock_panel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;unlock_panel.Parent" xml:space="preserve">
-    <value>DetailsSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;unlock_panel.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="DetailsSettingsGroup.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="HomeDetailsGroup.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 27</value>
   </data>
-  <data name="DetailsSettingsGroup.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="HomeDetailsGroup.Size" type="System.Drawing.Size, System.Drawing">
     <value>361, 118</value>
   </data>
-  <data name="DetailsSettingsGroup.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="HomeDetailsGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="DetailsSettingsGroup.Text" xml:space="preserve">
-    <value>Unlock</value>
+  <data name="HomeDetailsGroup.Text" xml:space="preserve">
+    <value>Home</value>
   </data>
-  <data name="DetailsSettingsGroup.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;HomeDetailsGroup.Name" xml:space="preserve">
+    <value>HomeDetailsGroup</value>
   </data>
-  <data name="&gt;&gt;DetailsSettingsGroup.Name" xml:space="preserve">
-    <value>DetailsSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;DetailsSettingsGroup.Type" xml:space="preserve">
+  <data name="&gt;&gt;HomeDetailsGroup.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DetailsSettingsGroup.Parent" xml:space="preserve">
+  <data name="&gt;&gt;HomeDetailsGroup.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;DetailsSettingsGroup.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="load_settings.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="load_settings.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="load_settings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 87</value>
-  </data>
-  <data name="load_settings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 23</value>
-  </data>
-  <data name="load_settings.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="load_settings.Text" xml:space="preserve">
-    <value>Load settings</value>
-  </data>
-  <data name="&gt;&gt;load_settings.Name" xml:space="preserve">
-    <value>load_settings</value>
-  </data>
-  <data name="&gt;&gt;load_settings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;load_settings.Parent" xml:space="preserve">
-    <value>DetailsSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;load_settings.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;HomeDetailsGroup.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="label19.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1918,7 +1549,7 @@
     <value>DetailsSettingsGroup</value>
   </data>
   <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="label18.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1954,7 +1585,7 @@
     <value>DetailsSettingsGroup</value>
   </data>
   <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="label15.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1987,7 +1618,7 @@
     <value>DetailsSettingsGroup</value>
   </data>
   <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2044,76 +1675,7 @@
     <value>DetailsSettingsGroup</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;unlock_password.Name" xml:space="preserve">
-    <value>unlock_password</value>
-  </data>
-  <data name="&gt;&gt;unlock_password.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;unlock_password.Parent" xml:space="preserve">
-    <value>unlock_panel</value>
-  </data>
-  <data name="&gt;&gt;unlock_password.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label16.Name" xml:space="preserve">
-    <value>label16</value>
-  </data>
-  <data name="&gt;&gt;label16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
-    <value>unlock_panel</value>
-  </data>
-  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;unlock_user.Name" xml:space="preserve">
-    <value>unlock_user</value>
-  </data>
-  <data name="&gt;&gt;unlock_user.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;unlock_user.Parent" xml:space="preserve">
-    <value>unlock_panel</value>
-  </data>
-  <data name="&gt;&gt;unlock_user.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label17.Name" xml:space="preserve">
-    <value>label17</value>
-  </data>
-  <data name="&gt;&gt;label17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
-    <value>unlock_panel</value>
-  </data>
-  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="unlock_panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 19</value>
-  </data>
-  <data name="unlock_panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 56</value>
-  </data>
-  <data name="unlock_panel.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;unlock_panel.Name" xml:space="preserve">
-    <value>unlock_panel</value>
-  </data>
-  <data name="&gt;&gt;unlock_panel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;unlock_panel.Parent" xml:space="preserve">
-    <value>DetailsSettingsGroup</value>
-  </data>
-  <data name="&gt;&gt;unlock_panel.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="unlock_password.Location" type="System.Drawing.Point, System.Drawing">
     <value>62, 25</value>
@@ -2222,6 +1784,54 @@
   </data>
   <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="unlock_panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 19</value>
+  </data>
+  <data name="unlock_panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 56</value>
+  </data>
+  <data name="unlock_panel.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;unlock_panel.Name" xml:space="preserve">
+    <value>unlock_panel</value>
+  </data>
+  <data name="&gt;&gt;unlock_panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;unlock_panel.Parent" xml:space="preserve">
+    <value>DetailsSettingsGroup</value>
+  </data>
+  <data name="&gt;&gt;unlock_panel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="DetailsSettingsGroup.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
+  </data>
+  <data name="DetailsSettingsGroup.Size" type="System.Drawing.Size, System.Drawing">
+    <value>361, 118</value>
+  </data>
+  <data name="DetailsSettingsGroup.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="DetailsSettingsGroup.Text" xml:space="preserve">
+    <value>Unlock</value>
+  </data>
+  <data name="DetailsSettingsGroup.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;DetailsSettingsGroup.Name" xml:space="preserve">
+    <value>DetailsSettingsGroup</value>
+  </data>
+  <data name="&gt;&gt;DetailsSettingsGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;DetailsSettingsGroup.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;DetailsSettingsGroup.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>

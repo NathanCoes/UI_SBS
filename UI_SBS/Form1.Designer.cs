@@ -85,7 +85,6 @@
             this.disk_letter = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.DetailsSettingsGroup = new System.Windows.Forms.GroupBox();
-            this.load_settings = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -494,7 +493,6 @@
             // 
             // DetailsSettingsGroup
             // 
-            this.DetailsSettingsGroup.Controls.Add(this.load_settings);
             this.DetailsSettingsGroup.Controls.Add(this.label19);
             this.DetailsSettingsGroup.Controls.Add(this.label18);
             this.DetailsSettingsGroup.Controls.Add(this.label15);
@@ -504,13 +502,6 @@
             resources.ApplyResources(this.DetailsSettingsGroup, "DetailsSettingsGroup");
             this.DetailsSettingsGroup.Name = "DetailsSettingsGroup";
             this.DetailsSettingsGroup.TabStop = false;
-            // 
-            // load_settings
-            // 
-            resources.ApplyResources(this.load_settings, "load_settings");
-            this.load_settings.Name = "load_settings";
-            this.load_settings.UseVisualStyleBackColor = true;
-            this.load_settings.Click += new System.EventHandler(this.button1_Click_3);
             // 
             // label19
             // 
@@ -675,7 +666,6 @@
         private System.Windows.Forms.Label text_admin;
         private System.Windows.Forms.Panel unlock_panel;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.Button load_settings;
     }
 }
 

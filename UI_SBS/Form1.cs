@@ -21,7 +21,6 @@ namespace UI_SBS
         public ToolStripMenuItem last_option;
         public GroupBox lastSection;
         public bool admin = false;
-        private OpenFileDialog loadSettings;
 
         public SBS_form()
         {
@@ -70,7 +69,6 @@ namespace UI_SBS
                 MenuServerOption.Visible = true;
                 MenuFTPOption.Visible = true;
                 MenuFileOption.Visible = true;
-                load_settings.Enabled = true;
                 ServerSettingsGroup.Enabled = true;
                 FTPSettingsGroup.Enabled = true;
                 fileSettingsGroup.Enabled = true;
@@ -88,7 +86,6 @@ namespace UI_SBS
                 ServerSettingsGroup.Enabled = false;
                 FTPSettingsGroup.Enabled = false;
                 fileSettingsGroup.Enabled = false;
-                load_settings.Enabled = false;
                 unlock_panel.Enabled = true;
             }
         }
@@ -348,26 +345,6 @@ namespace UI_SBS
         private void label12_Click_1(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click_3(object sender, EventArgs e)
-        {
-            loadSettings = new OpenFileDialog();
-
-            if (loadSettings.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    var sr = new StreamReader(loadSettings.FileName);
-                    Console.WriteLine(sr.ReadToEnd());
-                }
-                catch (SecurityException ex)
-                {
-                    SBS_program.log($"Security error.\n\nError message: {ex.Message}\n\n" +
-                    $"Details:\n\n{ex.StackTrace}");
-                    UI_SBS.SBS_program.alert(ex.Message, "[File System] Oops!", "OK", "Asterisk");
-                }
-            }
         }
     }
 }
