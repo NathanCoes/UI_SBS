@@ -15,6 +15,7 @@ App de escritorio desarrollado en **[.Net Framework](https://dotnet.microsoft.co
 **Paquetes necesarios**
 ```
 Install-Package Microsoft.Toolkit.Uwp.Notifications -Version 7.0.2
+Install-Package Newtonsoft.Json
 ```
 
 
